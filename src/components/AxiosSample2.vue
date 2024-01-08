@@ -24,8 +24,9 @@
 <script setup lang="ts">
 import axios from 'axios';
 import Vue from 'vue';
+import client from '@/api/client';
 
-export interface iItem {
+interface iItem {
     id: number,
     stock: number,
     name: string,
@@ -43,7 +44,8 @@ var vm = new Vue({
     },
     created: function() {
         let me = this;
-        axios.get('data/items.json')
+        //axios.get('data/items.json')
+        client.get('data/items.json')
             .then(function(res) {
                 me.items = res.data.items;
                 //let items: Array<iItem> = [];

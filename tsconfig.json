@@ -8,6 +8,7 @@
     },
     //"esModuleInterop": true,
     //"allowSyntheticDefaultImports": true,
+    "noImplicitAny": false, // TSでは型定義がない変数は暗黙のany型になるので、それを禁止します
   },
 
   "references": [
